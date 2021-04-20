@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  background-color: #FFEFD5;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  opacity: 55%;
+  margin-left: 50px;
+}
+p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 70%;
+
+}
+.qiuzer {
+  background-image: linear-gradient(#E0FFFF, #B0C4DE);
+  width: 750px;
+  height: 750px;
+  border-radius: 4%;
+}
+.head {
+  width: 400px;
+  height: 45px;
+  background-color: #B0C4DE;
+  border-radius: 20px;
+  margin-left: 150px;
+}
+.card_container {
+  display: flex;
+  width: 620px;
+  height: 620px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 65px;
+  margin-top: 20px;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+}
+.front,
+.back {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 15%;
+  justify-content: center;
+  align-items: center;
+}
+.front {
+  background-image: linear-gradient(#FFDAB9, #F0E68C);
+  z-index: 2;
+  backface-visibility: hidden;
+}
+.back {
+  background-image: linear-gradient(#FFC0CB, #FFDAB9);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+.container:hover .card {
+  transform: rotateY(180deg);
+}
+.container {
+  perspective: 1000px;
+}
+
